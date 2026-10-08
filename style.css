@@ -1,0 +1,350 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('https://i.pinimg.com/originals/19/26/6e/19266e1b4e9597fc43dc5cb056d3100b.jpg') no-repeat center center / 100%;
+    background-color: #1a1a1a; 
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 15px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #bc9652; 
+}
+
+.logo h1 {
+    color: #ffffff;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo span { 
+    color: #bc9652; 
+}
+
+
+.menu-topo {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-topo-btn {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none; 
+    cursor: pointer;
+    padding: 10px 5px;
+    transition: color 0.3s ease;
+}
+
+.menu-topo-btn:hover {
+    color: #bc9652; 
+}
+
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: -340px; 
+    width: 320px;  
+    height: 100vh;
+    background-color: #1a1a1a;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease-in-out; 
+    z-index: 1001;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-cadastro{
+    color: #bc9652;                 
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;        
+    padding: 8px 18px;          
+    border: 2px solid #bc9652;     
+    border-radius: 4px;             
+    background-color: transparent;  
+    transition: all 0.3s ease;      
+    display: inline-block;         
+    align-self: center;             
+}
+.btn-cadastro:hover {
+    background-color: #bc9652;      
+    color: #1a1a1a;                 
+    transform: scale(1.05);       
+    box-shadow: 0 0 10px rgba(188, 150, 82, 0.4); 
+}
+main {
+        width: 100%;
+        padding: 100px 5%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+#formcadastro {
+    text-align: center;
+    width: 90%;             
+    max-width: 450px;        
+    padding: 30px 20px;       
+    margin: 0 auto 15px auto; 
+    border: 1px solid #bc9652;
+    border-radius: 6px;      
+    background-color: #000000;
+    color: #ffffffff;
+    box-sizing: border-box;  
+}
+
+
+#formcadastro input {
+    width: 100%;
+    padding: 12px;           
+    margin-bottom: 15px;      
+    font-size: 16px;          
+    box-sizing: border-box;
+}
+
+
+#formcadastro button, #formcadastro input[type="submit"] {
+    padding: 12px 30px;      
+    font-size: 16px;         
+    cursor: pointer;
+}
+
+#formcadastro input:focus {
+  background-color: #bc9652;
+  border-color: #000000;
+  outline: none;
+}
+.btn-cadastro2{
+    color: #bc9652;                 
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;        
+    padding: 8px 18px;          
+    border: 2px solid #bc9652;     
+    border-radius: 4px;             
+    background-color: transparent;  
+    transition: all 0.3s ease;      
+    display: inline-block;         
+    align-self: center;             
+}
+
+
+.btn-cadastro2:hover {
+    background-color: #bc9652;      
+    color: #1a1a1a;                 
+    transform: scale(1.05);       
+    box-shadow: 0 0 10px rgba(188, 150, 82, 0.4); 
+}
+
+.menu-container.active {
+    left: 0;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    color: #bc9652;
+    font-size: 24px;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.menu-principal {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.grupo-submenu {
+    display: none;
+}
+
+.grupo-submenu.show {
+    display: block;
+}
+
+.grupo-submenu h3 {
+    color: #bc9652;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 5px;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.submenu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.submenu li a:hover {
+    color: #bc9652;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    max-width: 600px;
+    color: #dddddd;
+}
+
+.btn-agendar {
+    background-color: #bc9652;
+    color: #1a1a1a;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-agendar:hover {
+    background-color: #a37f41;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    header { 
+        flex-direction: column; 
+        gap: 10px; 
+        padding: 15px; 
+    }
+    
+    .hero h2 { 
+        font-size: 32px; 
+    }
+    
+    .hero p { 
+        font-size: 16px; 
+    }
+    
+    .menu-container { 
+        width: 280px; 
+
+    
+    }
+    #formlogin {
+    text-align: center;
+    width: 90%;             
+    max-width: 450px;        
+    padding: 30px 20px;       
+    margin: 20px auto 15px auto; 
+    border: 1px solid #bc9652;
+    border-radius: 6px;      
+    background-color: #000000;
+    color: #ffffff;
+    box-sizing: border-box;  
+}
+
+#formlogin input {
+    width: 100%;
+    padding: 12px;           
+    margin-bottom: 15px;      
+    font-size: 16px;          
+    box-sizing: border-box;
+    margin: 20px auto 15px auto; 
+    border: 1px solid #bc9652;
+    border-radius: 6px;      
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#formlogin .btn-cadastro2 {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #bc9652;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+}
+/* Mirando diretamente nos IDs dos dois campos usando o modificador !important */
+#loginEmail, #loginSenha {
+    width: 100% !important;
+    padding: 12px !important;           
+    margin-bottom: 15px !important;      
+    font-size: 16px !important;          
+    box-sizing: border-box !important;
+    display: block !important; /* Garante que eles fiquem um abaixo do outro */
+    background-color: #ffffff;
+    color: #000000;
+}
+
+ #loginSenha:focus {
+  background-color: #bc9652;
+  border-color: #000000;
+  outline: none;
+  color:#000000;
+
+}
+#loginEmail:focus {
+  background-color: #bc9652;
+  border-color: #000000;
+  outline: none;
+  color:#000000;
+}
